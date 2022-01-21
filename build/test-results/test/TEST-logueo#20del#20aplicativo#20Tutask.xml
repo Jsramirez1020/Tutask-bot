@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="logueo del aplicativo Tutask" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-01-20T23:49:42" hostname="LAPTOP-6N9OQL9L" time="249.161">
+  <properties/>
+  <testcase name="Al ingresar al link de Tutask debe completar los campos para loguearse" classname="logueo del aplicativo Tutask" time="166.04"/>
+  <testcase name="Al ingresar al link de Tutask debe completar los campos para loguearse" classname="logueo del aplicativo Tutask" time="57.061"/>
+  <testcase name="Al ingresar al link de Tutask debe completar los campos para loguearse" classname="logueo del aplicativo Tutask" time="26.057"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}) on port 30730
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jan 20, 2022 6:49:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+++++++++++++++++++ //*[@id='form-create-task']/text[2]/iframe
+***************** //*[@id='form-create-task']/text[2]/iframe
+++++++++++++++++++ //*[@id='form-create-task']/text[2]/iframe
+***************** //*[@id='form-create-task']/text[2]/iframe
+++++++++++++++++++ //*[@id='form-create-task']/text[2]/iframe
+***************** //*[@id='form-create-task']/text[2]/iframe
+]]></system-err>
+</testsuite>
