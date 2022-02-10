@@ -36,6 +36,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -45,7 +46,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jan 20, 2022 06:49:42 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Feb 7, 2022 04:00:21 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -61,6 +62,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -115,10 +118,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -129,10 +132,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>3</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -143,10 +146,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>72</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='10.811%'><span class='strong'>12</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='2.703%'>3</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='86.486%'>96</span> others
                 </div>
             </div>
         </div>
@@ -164,11 +167,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>logueo del aplicativo Tutask</span>
-						<span class='test-time'>Jan 20, 2022 06:49:43 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Feb 7, 2022 04:00:21 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -177,19 +180,19 @@
     <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenariooutline node' test-id='2' status='pass'>
+<div class='scenariooutline node' test-id='2' status='fail'>
     <div class='category-list'>
         <span class='category label'>@Smoke</span>
         <span class='category label'>@Regression</span>
     </div>
-    <span class='duration right label'>0h 4m 8s+937ms</span>
+    <span class='duration right label'>0h 2m 7s+854ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Al ingresar al link de Tutask debe completar los campos para loguearse</div>
-        <table class='runtime-table table-striped table'><tr><td>state</td><td>password</td><td>asuntos</td><td>etiquetas</td><td>invitados</td><td>negocios</td><td>numeroE</td><td>codNegocio</td><td>nombreR</td><td>apellidoR</td><td>id</td><td>telefono</td><td>celular</td><td>descripcion</td></tr><tr><td>paola.gomez@xyz.com.co</td><td>f1t1d34s</td><td>Prueba selenium</td><td>bacata</td><td>Alexandra</td><td>FA-220</td><td>20</td><td>25</td><td>Jose</td><td>Rodriguez</td><td>1000000000</td><td>2470830</td><td>3058734961</td><td>pruebas Selenium, pruebas Selenium, pruebas Selenium</td></tr><tr><td>lorena.rodriguez@xyz.com.co</td><td>f1t1d34s</td><td>QA SELENIUM</td><td>DESCUENTO DE COMISION</td><td>Paola g</td><td>FA-1011</td><td>16</td><td>18</td><td>********</td><td>apellido</td><td>5178698738</td><td>3639728</td><td>3105763466</td><td>Preubas automatizadas de QA, Preubas automatizadas de QA</td></tr><tr><td>duvan.garcia@xyz.com.co</td><td>f1t1d34s</td><td>Barrido</td><td>prueba</td><td>diana c</td><td>FA-2200</td><td>15</td><td>13</td><td>Prueba</td><td>QA</td><td>334789</td><td>4641066</td><td>3227896311</td><td>Barrido de tutask, Barrido de tutask, Barrido de tutask</td></tr></table>
+        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> ScenarioOutline: Al ingresar al link de Tutask debe completar los campos para loguearse</div>
+        <table class='runtime-table table-striped table'><tr><td>state</td><td>password</td><td>asuntos</td><td>etiquetas</td><td>invitados</td><td>negocios</td><td>numeroE</td><td>codNegocio</td><td>nombreR</td><td>apellidoR</td><td>id</td><td>telefono</td><td>celular</td><td>descripcion</td><td>asuntosCampo</td><td>etiquetasCampo</td><td>invitadosCampo</td><td>negociosCampo</td></tr><tr><td>paola.gomez@xyz.com.co</td><td>f1t1d34s</td><td>Prueba selenium</td><td>bacata</td><td>Alexandra</td><td>FA-220</td><td>20</td><td>25</td><td>Jose</td><td>Rodriguez</td><td>1000000000</td><td>2470830</td><td>3058734961</td><td>pruebas Selenium, pruebas Selenium, pruebas Selenium</td><td>QA FIT</td><td>prueba</td><td>Diana c</td><td>FA-1011</td></tr><tr><td>lorena.rodriguez@xyz.com.co</td><td>f1t1d34s</td><td>QA SELENIUM</td><td>DESCUENTO DE COMISION</td><td>Paola g</td><td>FA-1011</td><td>16</td><td>18</td><td>********</td><td>apellido</td><td>5178698738</td><td>3639728</td><td>3105763466</td><td>Preubas automatizadas de QA, Preubas automatizadas de QA</td><td>PRUEBAS</td><td>baca</td><td>Paola</td><td>FA-220</td></tr><tr><td>duvan.garcia@xyz.com.co</td><td>f1t1d34s</td><td>Barrido</td><td>prueba</td><td>diana c</td><td>FA-2200</td><td>15</td><td>13</td><td>Prueba</td><td>QA</td><td>334789</td><td>4641066</td><td>3227896311</td><td>Barrido de tutask, Barrido de tutask, Barrido de tutask</td><td>SELENIUM</td><td>baca</td><td>Alexandra</td><td>FA-220</td></tr></table>
     </div>
     <ul class='steps'>
-        <li test-id='3' class='node scenario pass' status='pass'>
-            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Al ingresar al link de Tutask debe completar los campos para loguearse</div>
+        <li test-id='3' class='node scenario fail' status='fail'>
+            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Al ingresar al link de Tutask debe completar los campos para loguearse</div>
             <ul class='gc steps'>
                     <li test-id='4' class='gc given pass' status='pass'>
                         <h6 class="step-name" title="LoginSteps.navegarTutask()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Ingresar a la URL tutask en Google</h6>
@@ -235,259 +238,541 @@
                         <h6 class="step-name" title="TareaNormalSteps.Enviar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then realizar clic en Enviar</h6>
                             <div class="node-step"></div>
                     </li>
-                    <li test-id='15' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.desplegablePqr()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Seleccionar el desplegable de nueva PQR</h6>
+                    <li test-id='15' class='gc and pass' status='pass'>
+                        <h6 class="step-name" title="TareaNormalSteps.Todas()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Hacer clic en la opcion todas</h6>
                             <div class="node-step"></div>
                     </li>
-                    <li test-id='16' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.clicPqr()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Seleccione la opcion PQR</h6>
-                            <div class="node-step"></div>
+                    <li test-id='16' class='gc when fail' status='fail'>
+                        <h6 class="step-name" title="TareaNormalSteps.Tarea()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When hacer clic en tarea</h6>
+                            <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html/body/section/div/div[3]/div/div[2]/div[2]/div/ul/li[1]/div/div[2]/div[1] (tried for 80 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pages.BasePages.FindPresence(BasePages.java:43)
+	at pages.BasePages.clickElementJS(BasePages.java:60)
+	at pages.TareaNormalPages.clicTarea(TareaNormalPages.java:105)
+	at steps.TareaNormalSteps.Tarea(TareaNormalSteps.java:49)
+	at ?.hacer clic en tarea(src/test/resources/features/Tutask.feature:18)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=/html/body/section/div/div[3]/div/div[2]/div[2]/div/ul/li[1]/div/div[2]/div[1]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-6N9OQL9L', ip: '172.25.20.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at pages.BasePages.FindPresence(BasePages.java:43)
+	at pages.BasePages.clickElementJS(BasePages.java:60)
+	at pages.TareaNormalPages.clicTarea(TareaNormalPages.java:105)
+	at steps.TareaNormalSteps.Tarea(TareaNormalSteps.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)
+	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:63)
+	at cucumber.runner.TestStep.run(TestStep.java:49)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
+	at cucumber.runner.TestCase.run(TestCase.java:44)
+	at cucumber.runner.Runner.runPickle(Runner.java:40)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</textarea>
+                                                </li>
+                    <li test-id='17' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.MasEditar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And hacer clic en MAS y en editar tarea</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='17' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.ingresarIframe()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar al ifram, seleccionar el tipo de PQR y seleccionar oficina</h6>
-                            <div class="node-step"></div>
+                    <li test-id='18' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.llenarNuevosCampos(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se llenan los  3 primeros campos de QA FIT asunto nuevo, prueba etiqueta nueva y descripcion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='18' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.llecarCampos1(String,String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se llena los campos de canal, 20 numero encargo, 25 codigo negocio, Jose nombre y Rodriguez apellido</h6>
-                            <div class="node-step"></div>
+                    <li test-id='19' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.quitarInvitado()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Quitar invitado</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='19' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.campoNegocio(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se llena el campo FA-220 Negocios</h6>
-                            <div class="node-step"></div>
+                    <li test-id='20' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.llenarCampoNuevo3(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se llenan los 2 ultimos campos Diana c invitados nuevos, FA-1011 Nedocios nuevos</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='20' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.tipoIdentificador()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Seleccionar el tipo de identificador</h6>
-                            <div class="node-step"></div>
+                    <li test-id='21' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.fecha()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar fecha viable2</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='21' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.campoDocEmail(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar el paola.gomez@xyz.com.co correo y el 1000000000 numero de identificacion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='22' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Guardar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then realizar clic en guardar</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='22' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.campoTelCel(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar el 2470830 telefono fijo y 3058734961 celular</h6>
-                            <div class="node-step"></div>
+                    <li test-id='23' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.cerrarEdicion()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Cerrar la edicion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='23' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.ultiCampos()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Seleccionar el derecho de peticion, motivo interno y el producto af</h6>
-                            <div class="node-step"></div>
+                    <li test-id='24' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.clicTarea()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Hacer clic en tarea2</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='24' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.descripcionPqr(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Se escribe una pruebas Selenium, pruebas Selenium, pruebas Selenium descripcion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='25' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Finalizar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Hacer clic en finalizar</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='25' class='gc then pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.Enviar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Se hace clic en el boton Enviar</h6>
-                            <div class="node-step"></div>
+                    <li test-id='26' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Calificacion()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar la  calificacion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='26' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.IconoCerrar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Icono sesion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='27' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.cerrarEdicion2()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Cerrar la edicion2</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='27' class='gc then pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.CerrarSesion()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then cerrar sesion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='28' class='gc given skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.desplegablePqr()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given Seleccionar el desplegable de nueva PQR</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='29' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.clicPqr()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccione la opcion PQR</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='30' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.ingresarIframe()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar al ifram, seleccionar el tipo de PQR y seleccionar oficina</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='31' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.llecarCampos1(String,String,String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Se llena los campos de canal, 20 numero encargo, 25 codigo negocio, Jose nombre y Rodriguez apellido</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='32' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.campoNegocio(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Se llena el campo FA-220 Negocios</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='33' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.tipoIdentificador()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Seleccionar el tipo de identificador</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='34' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.campoDocEmail(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar el paola.gomez@xyz.com.co correo y el 1000000000 numero de identificacion</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='35' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.campoTelCel(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar el 2470830 telefono fijo y 3058734961 celular</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='36' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.ultiCampos()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar el derecho de peticion, motivo interno y el producto af</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='37' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.descripcionPqr(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se escribe una pruebas Selenium, pruebas Selenium, pruebas Selenium descripcion</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='38' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.Enviar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Se hace clic en el boton Enviar</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='39' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.IconoCerrar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Icono sesion</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='40' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.CerrarSesion()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then cerrar sesion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
             </ul>
         </li>
-        <li test-id='28' class='node scenario pass' status='pass'>
-            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Al ingresar al link de Tutask debe completar los campos para loguearse</div>
+        <li test-id='41' class='node scenario fail' status='fail'>
+            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Al ingresar al link de Tutask debe completar los campos para loguearse</div>
             <ul class='gc steps'>
-                    <li test-id='29' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.navegarTutask()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Ingresar a la URL tutask en Google</h6>
-                            <div class="node-step"></div>
+                    <li test-id='42' class='gc given fail' status='fail'>
+                        <h6 class="step-name" title="LoginSteps.navegarTutask()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Given Ingresar a la URL tutask en Google</h6>
+                            <textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=97.0.4692.99)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-6N9OQL9L', ip: '172.25.20.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Fitideas\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58602}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 44dbad2b651a6ac866e603a76605fb62
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pages.BasePages.navegarTu(BasePages.java:35)
+	at pages.TutaskPages.navegarTutask(TutaskPages.java:16)
+	at steps.LoginSteps.navegarTutask(LoginSteps.java:19)
+	at ?.Ingresar a la URL tutask en Google(src/test/resources/features/Tutask.feature:5)
+</textarea>
+                                                </li>
+                    <li test-id='43' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="LoginSteps.ingresarCorreo(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Ingresar el lorena.rodriguez@xyz.com.co correo</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='30' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.ingresarCorreo(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Ingresar el lorena.rodriguez@xyz.com.co correo</h6>
-                            <div class="node-step"></div>
+                    <li test-id='44' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="LoginSteps.ingresarPassword(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar el f1t1d34s password</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='31' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.ingresarPassword(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar el f1t1d34s password</h6>
-                            <div class="node-step"></div>
+                    <li test-id='45' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="LoginSteps.clickBotonEntrar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Realizar clic en Entrar</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='32' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.clickBotonEntrar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Realizar clic en Entrar</h6>
-                            <div class="node-step"></div>
+                    <li test-id='46' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="LoginSteps.validarResultado()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Obtener ingreso al Home</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='33' class='gc then pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.validarResultado()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Obtener ingreso al Home</h6>
-                            <div class="node-step"></div>
+                    <li test-id='47' class='gc given skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.desplegable()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given Seleccionar el desplegable de nueva tarea</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='34' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.desplegable()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Seleccionar el desplegable de nueva tarea</h6>
-                            <div class="node-step"></div>
+                    <li test-id='48' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.opTareaNormal()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar la opcion Tarea normal</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='35' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.opTareaNormal()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Seleccionar la opcion Tarea normal</h6>
-                            <div class="node-step"></div>
+                    <li test-id='49' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.llenarCampos(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se llenan los  3 primeros campos de QA SELENIUM asunto, DESCUENTO DE COMISION etiqueta y descripcion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='36' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.llenarCampos(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Se llenan los  3 primeros campos de QA SELENIUM asunto, DESCUENTO DE COMISION etiqueta y descripcion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='50' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.llenarCampos2(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se llenan los 2 ultimos campos Paola g invitados, FA-1011 Nedocios</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='37' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.llenarCampos2(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Se llenan los 2 ultimos campos Paola g invitados, FA-1011 Nedocios</h6>
-                            <div class="node-step"></div>
+                    <li test-id='51' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Fechavigente()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar fecha viable</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='38' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.Fechavigente()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Seleccionar fecha viable</h6>
-                            <div class="node-step"></div>
+                    <li test-id='52' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Enviar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then realizar clic en Enviar</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='39' class='gc then pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.Enviar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then realizar clic en Enviar</h6>
-                            <div class="node-step"></div>
+                    <li test-id='53' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Todas()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Hacer clic en la opcion todas</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='40' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.desplegablePqr()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Seleccionar el desplegable de nueva PQR</h6>
-                            <div class="node-step"></div>
+                    <li test-id='54' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Tarea()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When hacer clic en tarea</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='41' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.clicPqr()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Seleccione la opcion PQR</h6>
-                            <div class="node-step"></div>
+                    <li test-id='55' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.MasEditar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And hacer clic en MAS y en editar tarea</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='42' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.ingresarIframe()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar al ifram, seleccionar el tipo de PQR y seleccionar oficina</h6>
-                            <div class="node-step"></div>
+                    <li test-id='56' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.llenarNuevosCampos(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se llenan los  3 primeros campos de PRUEBAS asunto nuevo, baca etiqueta nueva y descripcion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='43' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.llecarCampos1(String,String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se llena los campos de canal, 16 numero encargo, 18 codigo negocio, ******** nombre y apellido apellido</h6>
-                            <div class="node-step"></div>
+                    <li test-id='57' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.quitarInvitado()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Quitar invitado</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='44' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.campoNegocio(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se llena el campo FA-1011 Negocios</h6>
-                            <div class="node-step"></div>
+                    <li test-id='58' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.llenarCampoNuevo3(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se llenan los 2 ultimos campos Paola invitados nuevos, FA-220 Nedocios nuevos</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='45' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.tipoIdentificador()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Seleccionar el tipo de identificador</h6>
-                            <div class="node-step"></div>
+                    <li test-id='59' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.fecha()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar fecha viable2</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='46' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.campoDocEmail(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar el lorena.rodriguez@xyz.com.co correo y el 5178698738 numero de identificacion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='60' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Guardar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then realizar clic en guardar</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='47' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.campoTelCel(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar el 3639728 telefono fijo y 3105763466 celular</h6>
-                            <div class="node-step"></div>
+                    <li test-id='61' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.cerrarEdicion()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Cerrar la edicion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='48' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.ultiCampos()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Seleccionar el derecho de peticion, motivo interno y el producto af</h6>
-                            <div class="node-step"></div>
+                    <li test-id='62' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.clicTarea()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Hacer clic en tarea2</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='49' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.descripcionPqr(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Se escribe una Preubas automatizadas de QA, Preubas automatizadas de QA descripcion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='63' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Finalizar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Hacer clic en finalizar</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='50' class='gc then pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.Enviar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Se hace clic en el boton Enviar</h6>
-                            <div class="node-step"></div>
+                    <li test-id='64' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Calificacion()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar la  calificacion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='51' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.IconoCerrar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Icono sesion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='65' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.cerrarEdicion2()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Cerrar la edicion2</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='52' class='gc then pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.CerrarSesion()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then cerrar sesion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='66' class='gc given skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.desplegablePqr()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given Seleccionar el desplegable de nueva PQR</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='67' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.clicPqr()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccione la opcion PQR</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='68' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.ingresarIframe()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar al ifram, seleccionar el tipo de PQR y seleccionar oficina</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='69' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.llecarCampos1(String,String,String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Se llena los campos de canal, 16 numero encargo, 18 codigo negocio, ******** nombre y apellido apellido</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='70' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.campoNegocio(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Se llena el campo FA-1011 Negocios</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='71' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.tipoIdentificador()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Seleccionar el tipo de identificador</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='72' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.campoDocEmail(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar el lorena.rodriguez@xyz.com.co correo y el 5178698738 numero de identificacion</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='73' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.campoTelCel(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar el 3639728 telefono fijo y 3105763466 celular</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='74' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.ultiCampos()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar el derecho de peticion, motivo interno y el producto af</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='75' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.descripcionPqr(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se escribe una Preubas automatizadas de QA, Preubas automatizadas de QA descripcion</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='76' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.Enviar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Se hace clic en el boton Enviar</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='77' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.IconoCerrar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Icono sesion</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='78' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.CerrarSesion()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then cerrar sesion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
             </ul>
         </li>
-        <li test-id='53' class='node scenario pass' status='pass'>
-            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Al ingresar al link de Tutask debe completar los campos para loguearse</div>
+        <li test-id='79' class='node scenario fail' status='fail'>
+            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Al ingresar al link de Tutask debe completar los campos para loguearse</div>
             <ul class='gc steps'>
-                    <li test-id='54' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.navegarTutask()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Ingresar a la URL tutask en Google</h6>
-                            <div class="node-step"></div>
+                    <li test-id='80' class='gc given fail' status='fail'>
+                        <h6 class="step-name" title="LoginSteps.navegarTutask()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Given Ingresar a la URL tutask en Google</h6>
+                            <textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=97.0.4692.99)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-6N9OQL9L', ip: '172.25.20.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Fitideas\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58602}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 44dbad2b651a6ac866e603a76605fb62
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pages.BasePages.navegarTu(BasePages.java:35)
+	at pages.TutaskPages.navegarTutask(TutaskPages.java:16)
+	at steps.LoginSteps.navegarTutask(LoginSteps.java:19)
+	at ?.Ingresar a la URL tutask en Google(src/test/resources/features/Tutask.feature:5)
+</textarea>
+                                                </li>
+                    <li test-id='81' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="LoginSteps.ingresarCorreo(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Ingresar el duvan.garcia@xyz.com.co correo</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='55' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.ingresarCorreo(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Ingresar el duvan.garcia@xyz.com.co correo</h6>
-                            <div class="node-step"></div>
+                    <li test-id='82' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="LoginSteps.ingresarPassword(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar el f1t1d34s password</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='56' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.ingresarPassword(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar el f1t1d34s password</h6>
-                            <div class="node-step"></div>
+                    <li test-id='83' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="LoginSteps.clickBotonEntrar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Realizar clic en Entrar</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='57' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.clickBotonEntrar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Realizar clic en Entrar</h6>
-                            <div class="node-step"></div>
+                    <li test-id='84' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="LoginSteps.validarResultado()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Obtener ingreso al Home</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='58' class='gc then pass' status='pass'>
-                        <h6 class="step-name" title="LoginSteps.validarResultado()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Obtener ingreso al Home</h6>
-                            <div class="node-step"></div>
+                    <li test-id='85' class='gc given skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.desplegable()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given Seleccionar el desplegable de nueva tarea</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='59' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.desplegable()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Seleccionar el desplegable de nueva tarea</h6>
-                            <div class="node-step"></div>
+                    <li test-id='86' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.opTareaNormal()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar la opcion Tarea normal</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='60' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.opTareaNormal()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Seleccionar la opcion Tarea normal</h6>
-                            <div class="node-step"></div>
+                    <li test-id='87' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.llenarCampos(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se llenan los  3 primeros campos de Barrido asunto, prueba etiqueta y descripcion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='61' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.llenarCampos(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Se llenan los  3 primeros campos de Barrido asunto, prueba etiqueta y descripcion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='88' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.llenarCampos2(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se llenan los 2 ultimos campos diana c invitados, FA-2200 Nedocios</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='62' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.llenarCampos2(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Se llenan los 2 ultimos campos diana c invitados, FA-2200 Nedocios</h6>
-                            <div class="node-step"></div>
+                    <li test-id='89' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Fechavigente()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar fecha viable</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='63' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.Fechavigente()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Seleccionar fecha viable</h6>
-                            <div class="node-step"></div>
+                    <li test-id='90' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Enviar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then realizar clic en Enviar</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='64' class='gc then pass' status='pass'>
-                        <h6 class="step-name" title="TareaNormalSteps.Enviar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then realizar clic en Enviar</h6>
-                            <div class="node-step"></div>
+                    <li test-id='91' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Todas()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Hacer clic en la opcion todas</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='65' class='gc given pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.desplegablePqr()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Seleccionar el desplegable de nueva PQR</h6>
-                            <div class="node-step"></div>
+                    <li test-id='92' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Tarea()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When hacer clic en tarea</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='66' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.clicPqr()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Seleccione la opcion PQR</h6>
-                            <div class="node-step"></div>
+                    <li test-id='93' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.MasEditar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And hacer clic en MAS y en editar tarea</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='67' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.ingresarIframe()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar al ifram, seleccionar el tipo de PQR y seleccionar oficina</h6>
-                            <div class="node-step"></div>
+                    <li test-id='94' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.llenarNuevosCampos(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se llenan los  3 primeros campos de SELENIUM asunto nuevo, baca etiqueta nueva y descripcion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='68' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.llecarCampos1(String,String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se llena los campos de canal, 15 numero encargo, 13 codigo negocio, Prueba nombre y QA apellido</h6>
-                            <div class="node-step"></div>
+                    <li test-id='95' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.quitarInvitado()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Quitar invitado</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='69' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.campoNegocio(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Se llena el campo FA-2200 Negocios</h6>
-                            <div class="node-step"></div>
+                    <li test-id='96' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.llenarCampoNuevo3(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se llenan los 2 ultimos campos Alexandra invitados nuevos, FA-220 Nedocios nuevos</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='70' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.tipoIdentificador()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Seleccionar el tipo de identificador</h6>
-                            <div class="node-step"></div>
+                    <li test-id='97' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.fecha()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar fecha viable2</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='71' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.campoDocEmail(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar el duvan.garcia@xyz.com.co correo y el 334789 numero de identificacion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='98' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Guardar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then realizar clic en guardar</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='72' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.campoTelCel(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Ingresar el 4641066 telefono fijo y 3227896311 celular</h6>
-                            <div class="node-step"></div>
+                    <li test-id='99' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.cerrarEdicion()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Cerrar la edicion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='73' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.ultiCampos()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Seleccionar el derecho de peticion, motivo interno y el producto af</h6>
-                            <div class="node-step"></div>
+                    <li test-id='100' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.clicTarea()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Hacer clic en tarea2</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='74' class='gc and pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.descripcionPqr(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Se escribe una Barrido de tutask, Barrido de tutask, Barrido de tutask descripcion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='101' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Finalizar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Hacer clic en finalizar</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='75' class='gc then pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.Enviar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Se hace clic en el boton Enviar</h6>
-                            <div class="node-step"></div>
+                    <li test-id='102' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.Calificacion()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar la  calificacion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='76' class='gc when pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.IconoCerrar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Icono sesion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='103' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaNormalSteps.cerrarEdicion2()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Cerrar la edicion2</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
-                    <li test-id='77' class='gc then pass' status='pass'>
-                        <h6 class="step-name" title="TareaPqrSteps.CerrarSesion()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then cerrar sesion</h6>
-                            <div class="node-step"></div>
+                    <li test-id='104' class='gc given skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.desplegablePqr()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given Seleccionar el desplegable de nueva PQR</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='105' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.clicPqr()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccione la opcion PQR</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='106' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.ingresarIframe()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar al ifram, seleccionar el tipo de PQR y seleccionar oficina</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='107' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.llecarCampos1(String,String,String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Se llena los campos de canal, 15 numero encargo, 13 codigo negocio, Prueba nombre y QA apellido</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='108' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.campoNegocio(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Se llena el campo FA-2200 Negocios</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='109' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.tipoIdentificador()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Seleccionar el tipo de identificador</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='110' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.campoDocEmail(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar el duvan.garcia@xyz.com.co correo y el 334789 numero de identificacion</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='111' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.campoTelCel(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Ingresar el 4641066 telefono fijo y 3227896311 celular</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='112' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.ultiCampos()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Seleccionar el derecho de peticion, motivo interno y el producto af</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='113' class='gc and skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.descripcionPqr(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Se escribe una Barrido de tutask, Barrido de tutask, Barrido de tutask descripcion</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='114' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.Enviar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Se hace clic en el boton Enviar</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='115' class='gc when skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.IconoCerrar()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When Icono sesion</h6>
+                            <div class="node-step">Step skipped</div>
+                    </li>
+                    <li test-id='116' class='gc then skip' status='skip'>
+                        <h6 class="step-name" title="TareaPqrSteps.CerrarSesion()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then cerrar sesion</h6>
+                            <div class="node-step">Step skipped</div>
                     </li>
             </ul>
         </li>
@@ -537,13 +822,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Grid</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
+						<span class='label fail'>4</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 4</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -557,24 +842,24 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 20, 2022 06:49:43 PM</td>
+										<td>Feb 7, 2022 04:00:21 PM</td>
 										<td class='linked' test-id='1'>logueo del aplicativo Tutask</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 20, 2022 06:49:43 PM</td>
+										<td>Feb 7, 2022 04:00:21 PM</td>
 										<td class='linked' test-id='3'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 20, 2022 06:52:28 PM</td>
-										<td class='linked' test-id='28'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Feb 7, 2022 04:02:29 PM</td>
+										<td class='linked' test-id='41'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 20, 2022 06:53:25 PM</td>
-										<td class='linked' test-id='53'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Feb 7, 2022 04:02:29 PM</td>
+										<td class='linked' test-id='79'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -585,13 +870,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Smoke</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
+						<span class='label fail'>4</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 4</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -605,24 +890,24 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 20, 2022 06:49:43 PM</td>
+										<td>Feb 7, 2022 04:00:21 PM</td>
 										<td class='linked' test-id='2'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 20, 2022 06:49:43 PM</td>
+										<td>Feb 7, 2022 04:00:21 PM</td>
 										<td class='linked' test-id='3'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 20, 2022 06:52:28 PM</td>
-										<td class='linked' test-id='28'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Feb 7, 2022 04:02:29 PM</td>
+										<td class='linked' test-id='41'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 20, 2022 06:53:25 PM</td>
-										<td class='linked' test-id='53'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Feb 7, 2022 04:02:29 PM</td>
+										<td class='linked' test-id='79'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -633,13 +918,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Regression</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
+						<span class='label fail'>4</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 4</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -653,24 +938,24 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 20, 2022 06:49:43 PM</td>
+										<td>Feb 7, 2022 04:00:21 PM</td>
 										<td class='linked' test-id='2'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 20, 2022 06:49:43 PM</td>
+										<td>Feb 7, 2022 04:00:21 PM</td>
 										<td class='linked' test-id='3'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 20, 2022 06:52:28 PM</td>
-										<td class='linked' test-id='28'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Feb 7, 2022 04:02:29 PM</td>
+										<td class='linked' test-id='41'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 20, 2022 06:53:25 PM</td>
-										<td class='linked' test-id='53'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Feb 7, 2022 04:02:29 PM</td>
+										<td class='linked' test-id='79'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -686,7 +971,223 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.TimeoutException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 7, 2022 04:00:36 PM</td>
+										<td class='linked' test-id='16'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse.When hacer clic en tarea</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: /html/body/section/div/div[3]/div/div[2]/div[2]/div/ul/li[1]/div/div[2]/div[1] (tried for 80 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pages.BasePages.FindPresence(BasePages.java:43)
+	at pages.BasePages.clickElementJS(BasePages.java:60)
+	at pages.TareaNormalPages.clicTarea(TareaNormalPages.java:105)
+	at steps.TareaNormalSteps.Tarea(TareaNormalSteps.java:49)
+	at ?.hacer clic en tarea(src/test/resources/features/Tutask.feature:18)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=/html/body/section/div/div[3]/div/div[2]/div[2]/div/ul/li[1]/div/div[2]/div[1]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-6N9OQL9L', ip: '172.25.20.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at pages.BasePages.FindPresence(BasePages.java:43)
+	at pages.BasePages.clickElementJS(BasePages.java:60)
+	at pages.TareaNormalPages.clicTarea(TareaNormalPages.java:105)
+	at steps.TareaNormalSteps.Tarea(TareaNormalSteps.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)
+	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:63)
+	at cucumber.runner.TestStep.run(TestStep.java:49)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
+	at cucumber.runner.TestCase.run(TestCase.java:44)
+	at cucumber.runner.Runner.runPickle(Runner.java:40)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchWindowException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 7, 2022 04:02:29 PM</td>
+										<td class='linked' test-id='42'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse.Given Ingresar a la URL tutask en Google</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=97.0.4692.99)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-6N9OQL9L', ip: '172.25.20.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Fitideas\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58602}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 44dbad2b651a6ac866e603a76605fb62
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pages.BasePages.navegarTu(BasePages.java:35)
+	at pages.TutaskPages.navegarTutask(TutaskPages.java:16)
+	at steps.LoginSteps.navegarTutask(LoginSteps.java:19)
+	at ?.Ingresar a la URL tutask en Google(src/test/resources/features/Tutask.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Feb 7, 2022 04:02:29 PM</td>
+										<td class='linked' test-id='80'>logueo del aplicativo Tutask.Al ingresar al link de Tutask debe completar los campos para loguearse.Al ingresar al link de Tutask debe completar los campos para loguearse.Given Ingresar a la URL tutask en Google</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=97.0.4692.99)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-6N9OQL9L', ip: '172.25.20.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Fitideas\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58602}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 44dbad2b651a6ac866e603a76605fb62
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pages.BasePages.navegarTu(BasePages.java:35)
+	at pages.TutaskPages.navegarTutask(TutaskPages.java:16)
+	at steps.LoginSteps.navegarTutask(LoginSteps.java:19)
+	at ?.Ingresar a la URL tutask en Google(src/test/resources/features/Tutask.feature:5)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -706,25 +1207,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>72</div>
+					<div class='panel-lead'>111</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 20, 2022 06:49:42 PM</div>
+					<div class='panel-lead'>Feb 7, 2022 04:00:21 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 20, 2022 06:53:51 PM</div>
+			 		<div class='panel-lead'>Feb 7, 2022 04:02:29 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 4m 9s+133ms</div>
+					<div class='panel-lead'>0h 2m 8s+155ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -741,29 +1242,29 @@
 						</tr>
 						<tr>
 							<td>@Grid</td>
+							<td>0</td>
 							<td>4</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
 							<td>@Smoke</td>
+							<td>0</td>
 							<td>4</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
 							<td>@Regression</td>
+							<td>0</td>
 							<td>4</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -778,38 +1279,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				childCount: 3,
-				passChild: 3,
-				failChild: 0,
+				passChild: 0,
+				failChild: 3,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
-				grandChildCount: 72,
-				passGrandChild: 72,
-				failGrandChild: 0,
+				exceptionsChild: 3,
+				grandChildCount: 111,
+				passGrandChild: 12,
+				failGrandChild: 3,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 96,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 99,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "logueo del aplicativo Tutask":248.937
+			        "logueo del aplicativo Tutask":127.854
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

@@ -29,7 +29,7 @@ public class TareaPqrPages extends BasePages {
     private final String producto = "/html/body/div[1]/section/form/ul/li[10]/div[2]/select";
     private final String description = "/html/body/div[1]/section/form/ul/li[11]/textarea";
     private final String Enviar = "//*[@id='dv-create-task']/input";
-    private final String Icono = "//*[@id='header-tutask']/nav/ul/li[1]/div[1]/div";
+    private final String Icono = "/html/body/section/header/nav/ul/li[1]/div[1]/div";
     private final String Cerrar = "//*[@id='dv-info-user']/a[2]";
 
     
@@ -43,12 +43,12 @@ public class TareaPqrPages extends BasePages {
     */
 
     public void clicNuevaTareaPqr(){
-        clickElement2(nuevaTarea);
+        clickElementJS(nuevaTarea);
     }
 
 
     public void clicNuevaPqr(){
-        clickElement3(nuevaPqr);
+        clickElementJS(nuevaPqr);
     }
     public void clicLis(String Category){
         switchToiFrame(iframeN);
@@ -108,10 +108,10 @@ public class TareaPqrPages extends BasePages {
     }
 
     public void cilcIcono(){
-        clickElement(Icono);
+        clickElementJS(Icono);
     }
     public void clicCerrara(){
-        clickElement(Cerrar);
+        clickElementJS(Cerrar);
     }
     
 }

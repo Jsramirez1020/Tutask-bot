@@ -6,12 +6,7 @@ public class TutaskPages extends BasePages {
     private final String PasswordTextField = "//*[@id='logonprincipalform']/div[1]/input[2]";
     private final String EntrarButton = "//*[@id='logonprincipalform']/div[2]/input";
     //---------------------------------------------------------------------------------------------------------------------
-   
 
-    //private String centroNegocios = "//div[@id='input-asunto']";
-    //private String categoryDrop = "//html/body/div/text/nav/li[2]";
-                                    
-    
 
     public TutaskPages(){
             super(driver);

@@ -3,6 +3,7 @@ package pages;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +19,7 @@ public class BasePages {
     private static WebDriverWait wait;
 
     static{
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Fitideas\\Documents\\SELENIUM\\webdirver\\chromedriver_97\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Fitideas\\Documents\\SELENIUM\\webdirver\\chromedriver_98\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--disk-cache-size=0");
         driver = new ChromeDriver(chromeOptions);
@@ -33,18 +34,30 @@ public class BasePages {
     public static void navegarTu(String url){
         driver.get(url);
     }
-    
+
     private WebElement Find(String locator){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
 
+    private WebElement FindPresence(String locator){
+        return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+    }
+
     public void write(String locator, String textToWrite ){
+        Find(locator).clear();
+        Find(locator).clear();
+        Find(locator).clear();
+        Find(locator).clear();
         Find(locator).clear();
         Find(locator).sendKeys(textToWrite);
     }
 
     public void clickElement(String locator){
         Find(locator).click();
+    }
+    public void clickElementJS(String locator){
+        JavascriptExecutor je = (JavascriptExecutor)driver;
+        je.executeScript("arguments[0].click();", FindPresence(locator));
     }
 
     public void clickElement2(String locator){
@@ -105,7 +118,15 @@ public class BasePages {
         Select dropdwn = new Select (Find(locator));
 
         dropdwn.selectByValue(valueToSelect);
+        //dropdwn.selectByVisibleText(valueToSelect);
 
+
+    }
+
+    public void clikCondicional(String locator, String condicion){
+        if(!Find(locator).getAttribute("class").contains(condicion)){
+            this.clickElementJS(locator);
+        }
 
     }
     /*

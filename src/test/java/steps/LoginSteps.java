@@ -14,8 +14,6 @@ public class LoginSteps {
     @Given ("^Ingresar a la URL tutask en Google$")
     public void navegarTutask(){
 
-
-
        tutask.navegarTutask(); 
        //log.info("Se encontro la pagina");
     }
